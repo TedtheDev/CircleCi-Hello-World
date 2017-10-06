@@ -2,7 +2,7 @@ import React from 'react';
 
 const Main = (props) => {
     return (
-        <div>Hi from app</div>
+        <div>Hi frlilkklklklom app</div>
     )
 };
 
