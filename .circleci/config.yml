@@ -38,3 +38,15 @@ jobs:
 
       # build
       - run: npm run build
+
+      - run: bash .circleci/setup-heroku.sh
+
+      - add_ssh_keys:
+          fingerprints:
+            - "c5:2b:68:ed:8c:3c:1c:5d:dd:fa:da:7a:4b:7a:e8:df"
+      - deploy:
+          name: Deploy Master to Heroku
+          command: |
+            if [ "${CIRCLE_BRANCH}" == "master" ]; then
+              git push heroku master
+            fi
