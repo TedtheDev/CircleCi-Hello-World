@@ -7,7 +7,7 @@
     "test": "jest",
     "serve": "webpack-dev-server --hot --inline",
     "build": "webpack -p",
-    "start": "npm run build && node index.js"
+    "start": "node index.js"
   },
   "author": "",
   "license": "ISC",
