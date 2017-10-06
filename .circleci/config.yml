@@ -38,10 +38,3 @@ jobs:
 
       # build
       - run: npm run build
-
-      - deploy:
-          name: Maybe Deploy
-          command: |
-            if [ "${CIRCLE_BRANCH}" == "master" ]; then
-              <your-deploy-commands>
-            fi
